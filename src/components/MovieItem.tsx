@@ -110,8 +110,10 @@ function MovieItem(props: Props) {
         }}
         src={
           location.pathname !== "/" && location.pathname !== "/search"
-            ? "https://moviesapi-1bux.onrender.com/" + movie.poster
-            : movie.poster
+            ? "https://moviesapi-1bux.onrender.com/" +
+              "staticfiles/" +
+              movie.poster
+            : "staticfiles/" + movie.poster
         }
       />
       <BookmarkBox onClick={handleBookmark}>
